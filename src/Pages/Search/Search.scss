@@ -1,0 +1,49 @@
+@import "../../css-config/mixins.scss";
+
+.searchResults {
+  padding-top: 100px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  .searchResultsContent {
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .movie {
+      flex-grow: 1;
+      width: 46%;
+      overflow: hidden;
+      font-size: 0.8rem;
+      @include md {
+        width: 18%;
+        font-size: 1rem;
+      }
+      a {
+        .info p {
+          opacity: 0.7;
+          margin-top: 10px;
+        }
+        .poster {
+          width: 100%;
+          margin-bottom: 10px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+          }
+
+          :hover {
+            transition: all 0.5s ease;
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+}
